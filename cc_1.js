@@ -10,3 +10,13 @@ console.log("Tip", tip.toFixed(2));
 
 // Output Details
 console.log(`The bill was $${bill.toFixed(2)}, the tip was $${tip.toFixed(2)}, and the total value $${(bill + tip).toFixed(2)}.`);
+
+// Arrays
+const bills = [275, 40, 430, 125, 555, 44]
+const tips = bills.map(bill => calcTip(bill));
+const totals = bills.map((billItem, index) => billItem + tips[index]);
+
+//Displaying arrays
+console.log("Bills:", bills);
+console.log("Tips:", tips);
+console.log("Totals:", totals);
